@@ -1,1 +1,1 @@
-# GPLVM-VARS
+# Source code for our paper 'Gaussian Processes Proxy Model with Latent Variable Models and Variogram based Sensitivity Analysis for Assisted History Matching'
