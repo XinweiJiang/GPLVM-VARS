@@ -153,7 +153,10 @@ inpt_vect = dsfd{1,1};
     else
         %Using GPLVM based GPLVMIS to replace GPIS, which should be more
         %efficient especially when the number of uncertain parameters
-        %(num_dim) is large.
+        %(num_dim) is large. Actrually, here we can further discard the loop,
+        %and only one gradients based optimization is required to get the
+        %inverse sample, but to smoothly revise the code we still use the
+        %loop, where num_lvm is typically much smaller than num_dim.
        %% Set up the GPLVM model(x: lvms; y: parameters)
         for jj = 1 : num_lvm
     %         [hyp2{jj,1}, mu{jj,1}, s2{jj,1}, datastruc{jj,1}, cov_id{jj,1}] = train_gp_mult(x,y(:,jj),xs);
